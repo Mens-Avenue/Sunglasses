@@ -3,35 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>نموذج الطلب - التجارة الإلكترونية</title>
+  <title>طلب نظارات شمسية</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #e0e0e0; /* lighter background */
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #000000, #434343);
+      color: #fff;
     }
 
     .container {
-      padding: 16px;
+      padding: 24px;
       max-width: 480px;
-      margin: 40px auto;
-      background-color: #f7f7f7; /* darker than body */
-      border: 1px solid #aaa;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      margin: 50px auto;
+      background-color: #1a1a1a;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
     }
 
     .logo {
       display: block;
-      margin: 20px auto;
-      width: 150px;
+      margin: 0 auto 20px;
+      width: 120px;
+      filter: drop-shadow(0 0 5px #fff);
     }
 
     .carousel {
       display: flex;
       overflow-x: auto;
-      gap: 10px;
+      gap: 12px;
       scroll-snap-type: x mandatory;
       margin-bottom: 20px;
     }
@@ -40,43 +41,46 @@
       width: 100%;
       max-width: 200px;
       flex-shrink: 0;
-      border-radius: 10px;
+      border-radius: 12px;
       scroll-snap-align: start;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 20px;
+      border: 2px solid #fff;
     }
 
     form {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 14px;
     }
 
     input, select {
-      padding: 12px;
+      padding: 14px;
       font-size: 16px;
-      border: 2px solid black;
-      border-radius: 6px;
-      background-color: white;
+      font-weight: bold;
+      border: 2px solid #fff;
+      border-radius: 8px;
+      background-color: #333;
+      color: #fff;
       text-align: right;
     }
 
+    input::placeholder, select {
+      color: #ccc;
+    }
+
     button {
-      padding: 12px;
+      padding: 14px;
       font-size: 16px;
-      background-color: #007bff;
-      color: white;
+      font-weight: bold;
+      background-color: #ffcc00;
+      color: #000;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
 
     button:hover {
-      background-color: #0056b3;
+      background-color: #e6b800;
     }
   </style>
 </head>
@@ -87,18 +91,16 @@
 
     <!-- Carousel -->
     <div class="carousel">
-      <img src="product1.jpg" alt="منتج 1"/>
-      <img src="product2.jpg" alt="منتج 2"/>
-      <img src="product3.jpg" alt="منتج 3"/>
+      <img src="product1.jpg" alt="نظارات 1" />
+      <img src="product2.jpg" alt="نظارات 2" />
+      <img src="product3.jpg" alt="نظارات 3" />
     </div>
 
     <!-- Form -->
     <form action="https://formspree.io/f/manolegg" method="POST">
-      <h1>نموذج الطلب</h1>
-
-      <input type="text" name="name" placeholder="الاسم" required/>
-      <input type="text" name="surname" placeholder="اللقب" required/>
-      <input type="tel" name="phone" placeholder="رقم الهاتف" required/>
+      <input type="text" name="name" placeholder="الاسم" required />
+      <input type="text" name="surname" placeholder="اللقب" required />
+      <input type="tel" name="phone" placeholder="رقم الهاتف" required />
 
       <select name="wilaya" required>
         <option value="">اختر الولاية</option>
@@ -162,9 +164,9 @@
         <option>المنيعة</option>
       </select>
 
-      <input type="text" name="commune" placeholder="البلدية" required/>
-      <input type="text" name="address" placeholder="العنوان الكامل" required/>
-      <input type="number" name="pieces" placeholder="عدد القطع" required min="1"/>
+      <input type="text" name="commune" placeholder="البلدية" required />
+      <input type="text" name="address" placeholder="العنوان الكامل" required />
+      <input type="number" name="pieces" placeholder="عدد القطع" min="1" required />
 
       <button type="submit">إرسال الطلب</button>
     </form>

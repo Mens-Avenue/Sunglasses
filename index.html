@@ -9,17 +9,23 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background-color: #f8f8f8;
+      background-color: #e0e0e0; /* lighter background */
     }
 
     .container {
       padding: 16px;
       max-width: 480px;
-      margin: auto;
-      background-color: #fff;
-      border: 1px solid #ddd;
+      margin: 40px auto;
+      background-color: #f7f7f7; /* darker than body */
+      border: 1px solid #aaa;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      display: block;
+      margin: 20px auto;
+      width: 150px;
     }
 
     .carousel {
@@ -38,118 +44,126 @@
       scroll-snap-align: start;
     }
 
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
     form {
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
 
-    input, select, button {
+    input, select {
       padding: 12px;
       font-size: 16px;
       border: 2px solid black;
       border-radius: 6px;
-      text-align: right;
       background-color: white;
+      text-align: right;
     }
 
     button {
+      padding: 12px;
+      font-size: 16px;
       background-color: #007bff;
       color: white;
       border: none;
+      border-radius: 6px;
       cursor: pointer;
     }
 
     button:hover {
       background-color: #0056b3;
     }
-
-    h1 {
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Logo -->
+    <img src="your-logo.png" alt="الشعار" class="logo" />
+
+    <!-- Carousel -->
     <div class="carousel">
       <img src="product1.jpg" alt="منتج 1"/>
       <img src="product2.jpg" alt="منتج 2"/>
       <img src="product3.jpg" alt="منتج 3"/>
     </div>
 
+    <!-- Form -->
     <form action="https://formspree.io/f/manolegg" method="POST">
       <h1>نموذج الطلب</h1>
 
       <input type="text" name="name" placeholder="الاسم" required/>
       <input type="text" name="surname" placeholder="اللقب" required/>
+      <input type="tel" name="phone" placeholder="رقم الهاتف" required/>
 
       <select name="wilaya" required>
         <option value="">اختر الولاية</option>
-        <option value="أدرار">أدرار</option>
-        <option value="الشلف">الشلف</option>
-        <option value="الأغواط">الأغواط</option>
-        <option value="أم البواقي">أم البواقي</option>
-        <option value="باتنة">باتنة</option>
-        <option value="بجاية">بجاية</option>
-        <option value="بسكرة">بسكرة</option>
-        <option value="بشار">بشار</option>
-        <option value="البليدة">البليدة</option>
-        <option value="البويرة">البويرة</option>
-        <option value="تمنراست">تمنراست</option>
-        <option value="تبسة">تبسة</option>
-        <option value="تلمسان">تلمسان</option>
-        <option value="تيارت">تيارت</option>
-        <option value="تيزي وزو">تيزي وزو</option>
-        <option value="الجزائر">الجزائر</option>
-        <option value="الجلفة">الجلفة</option>
-        <option value="جيجل">جيجل</option>
-        <option value="سطيف">سطيف</option>
-        <option value="سعيدة">سعيدة</option>
-        <option value="سكيكدة">سكيكدة</option>
-        <option value="سيدي بلعباس">سيدي بلعباس</option>
-        <option value="عنابة">عنابة</option>
-        <option value="قالمة">قالمة</option>
-        <option value="قسنطينة">قسنطينة</option>
-        <option value="المدية">المدية</option>
-        <option value="مستغانم">مستغانم</option>
-        <option value="المسيلة">المسيلة</option>
-        <option value="معسكر">معسكر</option>
-        <option value="ورقلة">ورقلة</option>
-        <option value="وهران">وهران</option>
-        <option value="البيض">البيض</option>
-        <option value="إليزي">إليزي</option>
-        <option value="برج بوعريريج">برج بوعريريج</option>
-        <option value="بومرداس">بومرداس</option>
-        <option value="الطارف">الطارف</option>
-        <option value="تندوف">تندوف</option>
-        <option value="تيسمسيلت">تيسمسيلت</option>
-        <option value="الوادي">الوادي</option>
-        <option value="خنشلة">خنشلة</option>
-        <option value="سوق أهراس">سوق أهراس</option>
-        <option value="تيبازة">تيبازة</option>
-        <option value="ميلة">ميلة</option>
-        <option value="عين الدفلى">عين الدفلى</option>
-        <option value="النعامة">النعامة</option>
-        <option value="عين تموشنت">عين تموشنت</option>
-        <option value="غرداية">غرداية</option>
-        <option value="غليزان">غليزان</option>
-        <option value="تميمون">تميمون</option>
-        <option value="برج باجي مختار">برج باجي مختار</option>
-        <option value="أولاد جلال">أولاد جلال</option>
-        <option value="بني عباس">بني عباس</option>
-        <option value="عين صالح">عين صالح</option>
-        <option value="عين قزام">عين قزام</option>
-        <option value="تقرت">تقرت</option>
-        <option value="جانت">جانت</option>
-        <option value="المغير">المغير</option>
-        <option value="المنيعة">المنيعة</option>
+        <option>أدرار</option>
+        <option>الشلف</option>
+        <option>الأغواط</option>
+        <option>أم البواقي</option>
+        <option>باتنة</option>
+        <option>بجاية</option>
+        <option>بسكرة</option>
+        <option>بشار</option>
+        <option>البليدة</option>
+        <option>البويرة</option>
+        <option>تمنراست</option>
+        <option>تبسة</option>
+        <option>تلمسان</option>
+        <option>تيارت</option>
+        <option>تيزي وزو</option>
+        <option>الجزائر</option>
+        <option>الجلفة</option>
+        <option>جيجل</option>
+        <option>سطيف</option>
+        <option>سعيدة</option>
+        <option>سكيكدة</option>
+        <option>سيدي بلعباس</option>
+        <option>عنابة</option>
+        <option>قالمة</option>
+        <option>قسنطينة</option>
+        <option>المدية</option>
+        <option>مستغانم</option>
+        <option>المسيلة</option>
+        <option>معسكر</option>
+        <option>ورقلة</option>
+        <option>وهران</option>
+        <option>البيض</option>
+        <option>إليزي</option>
+        <option>برج بوعريريج</option>
+        <option>بومرداس</option>
+        <option>الطارف</option>
+        <option>تندوف</option>
+        <option>تيسمسيلت</option>
+        <option>الوادي</option>
+        <option>خنشلة</option>
+        <option>سوق أهراس</option>
+        <option>تيبازة</option>
+        <option>ميلة</option>
+        <option>عين الدفلى</option>
+        <option>النعامة</option>
+        <option>عين تموشنت</option>
+        <option>غرداية</option>
+        <option>غليزان</option>
+        <option>تميمون</option>
+        <option>برج باجي مختار</option>
+        <option>أولاد جلال</option>
+        <option>بني عباس</option>
+        <option>عين صالح</option>
+        <option>عين قزام</option>
+        <option>تقرت</option>
+        <option>جانت</option>
+        <option>المغير</option>
+        <option>المنيعة</option>
       </select>
 
       <input type="text" name="commune" placeholder="البلدية" required/>
       <input type="text" name="address" placeholder="العنوان الكامل" required/>
-      <input type="tel" name="phone" placeholder="رقم الهاتف" required/>
       <input type="number" name="pieces" placeholder="عدد القطع" required min="1"/>
 
       <button type="submit">إرسال الطلب</button>
